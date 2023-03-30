@@ -6,4 +6,7 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+// Phone routes
+router.use("/phones", require("./phones.routes"));
+
 module.exports = router;
