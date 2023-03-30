@@ -11,7 +11,7 @@ router.get("/:id", (req, res, next) => {
   const { id } = req.params;
 
   const foundPhone = phones.find((phone) => {
-    return (phone.id = id);
+    return phone.id === Number(id);
   });
 
   res.json(foundPhone);
